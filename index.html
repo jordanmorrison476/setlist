@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang=en-US>
+    
+    <head>
+        
+        <title>Setlist | Home</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="../main_stylesheet.css" type="text/css">
+        <link rel="icon" href="assets/setlist_trans_9a9_icon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="assets/setlist_trans_9a9_icon.ico" type="image/x-icon"/>
+        
+        <style type="text/css">
+        
+           body{
+               font-family:'Montserrat', sans-serif;
+               background-color:#7d1e80;
+               color:white;
+               
+               
+           }
+        
+        #Navbar{
+            position:relative;
+            padding:30px;
+            text-align:center;
+            right:45px;
+            /* border-bottom: solid #fc4bdf 0.1px;*/
+            
+        }
+            
+        #Navbar li {
+           list-style-type: none;
+           display: inline;
+           font-size:18px;
+           
+            }
+        
+        #Navbar a{
+           color:white;
+           font-family:'Montserrat', sans-serif;
+           text-decoration:none;
+           padding:15px;
+          
+          
+        }
+        
+        #Navbar a:hover{
+            color:rgba(234, 185, 226, 0.6);
+        }
+        
+        #logo{
+            position:relative;
+            float:left;
+            top:-30px;
+            left:70px;
+        }
+        
+        #logo:hover{
+            color:rgba(242,218,255,0.8);
+        }
+        
+        #panel-1{
+            color:rgba(0, 0, 0, 0.9);
+            z-index:3;
+        }
+        
+        #img-1{
+            position:absolute;
+            margin:0;
+            padding:0;
+            height:100%;
+            width:100%;
+            left:-0.001%;
+            border-top: solid #fc4bdf 0.8px;
+            z-index:1;
+           
+            
+            
+        }
+        
+        h{
+            position:relative;
+            z-index:2;
+            color:white;
+            font-family:'Montserrat', sans-serif;
+            font-size:84px;
+            left:370px;
+            top:100px;
+        }
+        
+        p{
+            position:fixed;
+            z-index:2;
+            color:white;
+            font-family:'Montserrat', sans-serif;
+            font-size:26px;
+            left:260px;
+            bottom:200px;
+        }
+            
+        #calltoaction{
+            position:relative;
+            z-index:3;
+            background-color:white;
+            color:black;
+            border-radius:2px;
+            font-family:'Montserrat', sans-serif;
+            text-decoration:none;
+            border-width:0px;
+            padding:15px;
+            font-size:17px;
+            top:280px;
+            left:140px;
+        
+        }  
+        
+        #calltoaction:hover{
+            background-color:rgba(255,255,255,0.8);
+        }
+        
+        h2{
+            position:absolute;
+            z-index:2;
+            color:white;
+            font-family:'Montserrat', sans-serif;
+            font-size:26px;
+            left:300px;
+            bottom:-270px;
+            font-weight:normal;
+        }
+        
+        #logo-1{
+            position:absolute;
+            z-index:2;
+            left:150px;
+            bottom:-490px;
+            padding:30px;
+            
+        }
+        
+        #logo-2{
+            position:absolute;
+            z-index:2;
+            left:390px;
+            bottom:-435px;
+            padding:30px;
+        }
+        
+        #logo-3{
+            position:absolute;
+            z-index:2;
+            left:680px;
+            bottom:-465px;
+            padding:30px;
+        }
+        
+        #logo-4{
+            position:absolute;
+            z-index:2;
+            left:950px;
+            bottom:-450px;
+            padding:30px;
+        }
+        
+        iframe{
+            position:relative;
+            width:110%;
+            left:-100px;
+            height:90vh;
+            bottom:-900px;
+            z-index:5;
+            background:rgba(0,0,0,.6);
+            padding:0px;
+            overflow:hidden;
+            display:flex;
+            margin:0px;
+            
+           
+           
+        }
+        
+        #video1{
+            pointer-events:none;
+            
+        }
+        
+      
+
+        
+        
+        h3{
+            position:absolute;
+            bottom:-1250px;
+            left:300px;
+            font-size:19px;
+            font-weight:normal;
+        }
+        
+        form{
+            position:relative;
+            bottom:-1110px;
+            left:465px;
+            width:100%;
+            height:100vh;
+            overflow:hidden;
+        }
+        
+        #phone_number{
+             font-family:'Montserrat', sans-serif;
+             color:grey;
+             font-size:15px;
+             overflow:hidden;
+             padding-right:100px;
+             padding:10px;
+        }
+        
+        #send_link{
+            position:relative;
+             font-family:'Montserrat', sans-serif;
+             background:#1D7927;
+             color:white;
+             border:none;
+             border-radius:2px;
+             padding:10.5px;
+             font-size:18px;
+             overflow:hidden;
+             right:4px;
+             bottom:-1px;
+             
+             
+        }
+        
+        #img-2{
+            position:relative;
+            width:110%;
+            height:80vh;
+            bottom:-600px;
+            z-index:6;
+            left:-10px;
+            overflow:hidden;
+        }
+        
+        #calltoaction2{
+            position:relative;
+            font-family:'Montserrat', sans-serif;
+            background:white;
+            color:black;
+            border:none;
+            border-radius:2px;
+            bottom:-240px;
+            left:530px;
+            padding:20px;
+            z-index:7;
+            font-size:16px;
+            text-decoration:none;
+        }
+        
+        #calltoaction2:hover{
+            background-color:rgba(255,255,255,0.8);
+        }
+        
+        #email{
+            font-family:'Montserrat', sans-serif;
+             color:grey;
+             padding:5px;
+             font-size:15px;
+             overflow:hidden;
+             padding-right:500px;
+             padding:10px;
+            
+        }
+        
+        #send_email{
+             position:relative;
+             font-family:'Montserrat', sans-serif;
+             background:#1D7927;
+             color:white;
+             border:none;
+             border-radius:2px;
+             padding:10.5px;
+             font-size:18px;
+             overflow:hidden;
+             right:4px;
+             bottom:0px;
+        }
+        
+      
+        </style>
+        
+
+        
+
+        
+    </head>
+    
+    <body>
+    
+    
+        
+    <ul id="Navbar">
+    <a href="#">
+    <img id="logo" src="assets/SETLIST_LOGO_NAME.png" height=90 width=90 href="#">
+    </a>    
+    <li><a href="#">Home</a></li>
+    <li><a href="#">What Is Setlist?</a></li>
+    <li><a href="#">Web App</a></li>
+    <li><a href="#">More Info</a></li>
+    </ul>
+    
+    <div id="panel-1">
+    <h>SETLIST</h>
+    <h2 style="position:absolute;bottom:240px;left:260px">Create perfect playlists for you, your friends and for the crowd </h2> 
+    <img id="img-1" src="assets/img_dj.jpg" alt="Picture of DJ">
+    <a type="button" id="calltoaction" href="#">TRY IT NOW</a>
+    </div>
+    
+    <h2>SETLIST CONNECTS TO YOUR MUSIC STREAMING SERVICES...</h2>
+    <img id="logo-1" src="assets/Spotify_logo.png" height=160 width=160>
+    <img id="logo-2" src="assets/AppleMusic_logo.png" height=50 width=200>
+    <img id="logo-3" src="assets/Deezer_logo.png" height=100 width=180>
+    <img id="logo-4" src="assets/Tidal_logo.png" height=80 width=180>
+    
+    <div id="video1">
+      <iframe id="video1" width="700" height="300" src="https://www.youtube.com/embed/-5EQIiabJvk?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1;mute=1;disablekb=1;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen playsinline></iframe>
+      <h2 style="z-index:6;bottom:-800px;left:170px">And gives you the power to play the perfect song anytime and anywhere.</h2>
+    </div>
+    
+    
+    <h2 style="position:absolute;bottom:-1200px;left:530px;font-size:28px;font-weight:normal;">TRY IT FOR YOURSELF</h2>
+    <h3>Looks like you're on desktop! Want us to send the download link to your phone?</h3>
+    <form>
+        <label>
+          <input type="text" id="phone_number" value="Enter Phone Number">
+          <button id="send_link">
+              SEND ME THE LINK
+          </button>
+        </label>
+    </form>
+    
+    <div id="panel2">
+        <img id="img-2" src="assets/audience-backlit-band-154147.jpg" height=200 width=400>
+        <h2 style="position:relative;bottom:-220px;z-index:7;font-size:56pt;left:450px">Can't wait?</h2>
+        <a href="#" type="button" id="calltoaction2">USE OUR WEB APP NOW!</a>
+    </div>
+    
+    <form style="bottom:-500px;left:200px">
+     <label>
+          <input type="text" id="email" value="Email Address">
+          <button id="send_email">
+              SUBSCRIBE
+          </button>
+        </label>
+    </form>
+  
+        
+    </body>
+    
+</html>

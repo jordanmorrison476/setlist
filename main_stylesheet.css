@@ -1,0 +1,14 @@
+/* Setlist purple : #7d1e80 
+           pink : #8c3494
+           green: #1d7927 */
+            
+body{
+    background-color:#7d1e80;
+    color:white;
+}
+
+.li{
+    text-decoration:none;
+    float:right;
+    font-size:18px;
+}
