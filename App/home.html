@@ -83,6 +83,37 @@
       #start:hover{
         opacity:0.82;
       }
+      
+      #tutorial{
+       position:relative;
+        top:110px;
+        left:50px;
+        text-decoration:none;
+        color:black;
+        background:white;
+        padding:10px;
+        border-radius:20px;
+      }
+      
+      #tutorial:hover{
+        opacity:0.82;
+      }
+      
+      #newsfeed{
+        position:absolute;
+        border-left:solid #5d5e60 1px;
+        right:300px;
+        top:84px;
+        height:86.6vh;
+        width:50px;
+        font-family:'Montserrat', sans-serif;
+      }
+      
+      #logout{
+        position:relative;
+        top:110px;
+        left:150px;
+      }
       </style>
       
     </head>
@@ -93,9 +124,10 @@
       <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;z-index:10;background-color:#A225AF;color:white;font-family:'Montserrat',sans-serif;font-weight:normal;text-decoration:none;" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large"
         onclick="w3_close()" style="bottom-border:pink;">Close &times;</button>
-        <strong class="menumargin">Home</strong>
-        <a href="#" class="w3-bar-item w3-button">Start New Session</a>
-        <a href="#" class="w3-bar-item w3-button">My Sessions</a>
+        <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+        <strong class="menumargin">My Sessions</strong>
+        <a href="new_session.html" class="w3-bar-item w3-button">Start New Session</a>
+        <a href="#" class="w3-bar-item w3-button">Session History</a>
         <strong class="menumargin">Preferences</strong>
         <a href="#" class="w3-bar-item w3-button">My Profile</a>
         <a href="#" class="w3-bar-item w3-button">Settings</a>
@@ -104,8 +136,9 @@
         <a href="#" class="w3-bar-item w3-button">User Guide</a>
         <a href="#" class="w3-bar-item w3-button">Terms Of Use</a>
         <a href="#" class="w3-bar-item w3-button">Supporting Information</a>
-        <a href="#" class="w3-bar-item w3-button">Licensing Restrictions</a>
-        </br></br></br></br></br></br>
+        <a href="#" class="w3-bar-item w3-button">Licensing Restrictions</a><br/>
+        <a href="#" class="w3-bar-item w3-button"><strong>Logout</strong></a>
+        </br></br>
         <h6 style="position:absolute;font-size:10px;left:10px">Copyright Jordan Morrison 2018 &copy;</h6>
       </div>
   
@@ -127,20 +160,30 @@
       
       <!-- End of hamburger menu code -->
       
-     <hr id="newsfeed" width="1" size="500" style="position:absolute;z-index:5;color:white;">
+
       
       <div class="content">
         
-        <hr  width="1" size="500" style=" z-index:7;right:200px;color:white;">
+        <h3 style="font-size:40px;position:relative;top:20px;">Welcome to the Setlist Web App!</h3>
         
-        <h3 style="font-size:40px;position:relative;top:10px;">Welcome to the Setlist Web App!</h3>
-        
-        <h5 style="position:relative;top:50px">Setlist allows you to create music playlists based on you and your friends listening habits. Click the button below to start a new session.</h5>
+        <h5 style="position:relative;top:60px">Setlist is an intelligent digital music playlist generator. It creates playlists based on you and your friends music preferences.<br/><br/> 
+       Imagine having the ability to read the minds of your friends or a crowd of thousands. Imagine having the ability to play that perfect song at just the right moment. 
 
-        <a id="start" href="#">START SESSION</a>
+Well imagine no longer, as Setlist does all of this - and much more. So what are you waiting for? <br/><br/> Click the button below to start a new session.</h5>
+
+        <a id="start" href="new_session.html">START SESSION</a>
+        
+        <a id="tutorial" href="#">WATCH TUTORIAL VIDEO</a>
+        
+        <a id="logout" href="login.html">Logout</a>
+        
+        <div id="newsfeed">
+          <h3 style="font-weight:bold;padding:10px;width:350px;text-align:center;border-bottom:1px solid #5d5e60">News and Updates:</h3>
+        </div>
      
      
     
         </div>
     </body>
 </html>
+

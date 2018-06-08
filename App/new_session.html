@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Setlist | Web app</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         <link rel="icon" href="../assets/SETLIST_LOGO.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="assets/SETLIST_LOGO.ico" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        
+        <!--adding bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+    
+    
+    body{
+      height:100vh;
+      width:100%;
+       background: linear-gradient(to bottom, #3b3d3a -30%, #181818 100%);
+    }
+    
+    .w3-bar-item{
+      border-bottom: 1px solid pink;
+    }
+  
+      .headerstyling,.headerstyling:hover{
+        background-color:#7D1E80;
+        padding:0;
+        margin:0;
+        padding-bottom:-60px;
+      }
+      
+      h{
+        position:absolute;
+        color:white;
+        z-index:2;
+        left:80px;
+        top:40px;
+        font-family:'Montserrat', sans-serif;
+        
+      }
+      
+      h1{
+        z-index:4;
+        color: white;
+        font-size:12px;
+        position:absolute;
+      }
+      #content{
+          position:relative;
+          font-family:'Montserrat', sans-serif;
+          width:250px;
+          height:86.8vh;
+          border-right:1px solid #5d5e60;
+         
+      }
+      .menumargin{
+        margin-left:5%;
+      }
+      
+      #newsfeed{
+        position:relative;
+        z-index:5;
+        right:200px;
+        color:white;
+      }
+      
+      
+      
+      #add-friends{
+        position:relative;
+        top:30px;
+        left:15px;
+        text-decoration:none;
+        color:white;
+        background:#7D1E80;
+        padding:10px;
+        border-radius:20px;
+        padding-right:3.2em;
+        padding-left:3.2em;
+        
+      }
+      
+      #add-friends:hover{
+        opacity:0.82;
+      }
+      
+      #share-link{
+        position:relative;
+        top:40px;
+        left:10px;
+        text-decoration:none;
+        color:white;
+        background:#20B654;
+        padding:10px;
+        border-radius:20px;
+        padding-right:2em;
+        padding-left:2em;
+        
+      }
+      
+      #share-link:hover{
+        opacity:0.82
+      }
+      
+      #search-devices{
+        position:relative;
+        top:50px;
+        left:10px;
+        text-decoration:none;
+        color:#1F1F1E;
+        background:#afafaf;
+        padding:10px;
+        border-radius:20px;
+      }
+      
+      #search-devices:hover{
+        opacity:0.82
+      } 
+      
+      /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #20B352;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  background-color:#afafaf;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#center-panel{
+  position:absolute;
+  border-right: 1px solid #5d5e60;
+  left:800px;
+  top:84px;
+  height:86.8vh;
+  z-index:5;
+}
+
+#labels{
+  position:absolute;
+  color:white;
+  top:210px;
+  padding-bottom:20px;
+  width:inherit;
+  
+  
+}
+
+#center-panel{
+  position:absolute;
+  z-index:5;
+  width:50px;
+  
+}
+
+#web-player{
+  position:absolute;
+  z-index:5;
+  left:850px;
+
+}
+
+iframe{
+  width:500px;
+  height:554px;
+  overflow:hidden;
+}
+
+#group{
+  position:absolute;
+  left:-220px;
+  top:360px;
+  border:none;
+  background:#3b3d3a;
+  padding:3px;
+  color:white;
+  outline:none;
+  font-weight:bold;
+  font-size:16px;
+  text-align:center;
+}
+
+#playlist{
+  position:absolute;
+  left:-220px;
+  top:420px;
+  border:none;
+  background:#3b3d3a;
+  padding:3px;
+  color:white;
+  outline:none;
+  font-weight:bold;
+  font-size:16px;
+  text-align:center;
+}
+
+#lbl-name{
+  position:absolute;
+  left:-480px;
+  top:360px;
+  font-family:'Montserrat', sans-serif;
+  color:#afafaf;
+  font-size:19px;
+}
+
+#lbl-playlist{
+  position:absolute;
+  left:-480px;
+  top:422px;
+  font-family:'Montserrat', sans-serif;
+  color:#afafaf;
+  font-size:19px;
+}
+
+#create-setlist{
+  position:absolute;
+  left:-200px;
+  top:482px;
+  font-family:'Montserrat', sans-serif;
+   text-decoration:none;
+    color:white;
+    background:#20B654;
+    padding:10px;
+    border-radius:20px;
+    border:none;
+    cursor:pointer;
+    outline:none;
+ 
+}
+
+#create-setlist:hover{
+  opacity:0.82;
+}
+
+#refresh-setlist{
+  position:absolute;
+  left:-450px;
+  top:485px;
+  font-family:'Montserrat', sans-serif;
+  color:black;
+  background:#afafaf;
+  padding:10px;
+    border-radius:20px;
+    border:none;
+    padding-left:2em;
+    padding-right:2em;
+     cursor:pointer;
+   outline:none;
+}
+
+#refresh-setlist:hover{
+  opacity:0.82;
+}
+      </style>
+      
+       
+      
+    </head>
+    
+    <body>
+      <!-- Hamburger menu code -->
+        
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;z-index:10;background-color:#A225AF;color:white;font-family:'Montserrat',sans-serif;font-weight:normal;text-decoration:none;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()" style="bottom-border:pink;">Close &times;</button>
+        <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+        <strong class="menumargin">My Sessions</strong>
+        <a href="#" class="w3-bar-item w3-button">Start New Session</a>
+        <a href="#" class="w3-bar-item w3-button">Session History</a>
+        <strong class="menumargin">Preferences</strong>
+        <a href="#" class="w3-bar-item w3-button">My Profile</a>
+        <a href="#" class="w3-bar-item w3-button">Settings</a>
+        <a href="#" class="w3-bar-item w3-button">Link Account</a>
+        <strong class="menumargin">About</strong>
+        <a href="#" class="w3-bar-item w3-button">User Guide</a>
+        <a href="#" class="w3-bar-item w3-button">Terms Of Use</a>
+        <a href="#" class="w3-bar-item w3-button">Supporting Information</a>
+        <a href="#" class="w3-bar-item w3-button">Licensing Restrictions</a><br/>
+        <a href="login.html" class="w3-bar-item w3-button">Logout</a>
+        </br></br>
+        <h6 style="position:absolute;font-size:10px;left:10px">Copyright Jordan Morrison 2018 &copy;</h6>
+      </div>
+  
+      <div class="headerstyling">
+        <button id="openNav"  style="padding:15px" class="w3-button w3-purple w3-xxlarge" onclick="w3_open()">&#9776;</button>
+        <h>Setlist Web App Alpha V1.1.1</h>
+        <img src="../assets/SETLIST_LOGO_NAME.png" height=80 width=80 style="position:relative;left:1175px;">
+       
+      </div>
+      
+      <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      </script>
+      
+      <!-- End of hamburger menu code -->
+      
+      <div id="center-panel">
+        
+        <form>
+          
+          
+         <label id="lbl-name"> Give your group a name:</label>
+          <input type="text" id="group" name="group" maxlength=18 placeholder="Group Name">
+          
+          <label id="lbl-playlist"> Give your Setlist a name: </label>
+         <input type="text" id="playlist" name="playlist" maxlength=18 placeholder="Playlist Name">
+          
+          <button id="create-setlist">CREATE SETLIST</button>
+          <button id="refresh-setlist">&#8634; REFRESH</button>
+        </form>
+        
+        
+        
+      </div>
+      
+      <div id="web-player">
+         <iframe src="https://open.spotify.com/embed/user/11140603442/playlist/1uof6fldeJ9oAVzbUq90AI" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        
+      </div>
+      
+     
+      
+      <div id="content">
+          
+          <a href="#" id="add-friends">+ ADD FRIENDS</a><br/><br/>
+          <a href="#" id="share-link"> SHARE SESSION LINK</a><br/><br/>
+          <a href="#" id="search-devices">SEARCH NEARBY DEVICES</a>
+          
+         <div id="labels">
+           <h6>&nbsp;&nbsp;&nbsp;Make Session Public<br/><br/><br/>
+               &nbsp;&nbsp;&nbsp;Enable Auto-Fade <br/><br/><br/>
+               &nbsp;&nbsp;&nbsp;Enable EQ 
+           </h6>
+           
+         </div>
+        <label class="switch"  style="position:relative;top:97px;left:180px">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+      <label class="switch" style="position:relative;top:152px;left:135px">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+
+      <label class="switch"  style="position:relative;top:205px;left:92px;">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      
+      
+        
+      
+           
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  
+  <script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+  const token = 'BQAQyX2Zd9GW1GM55sTmFcwQ_QSOZ8Ltimt2gdzkxBwG0wgz9onM09ToZqhFvRclTde-ftjBjCOCegTXd9jQIb01b1AWaQlAgEjSzpIQ9yZNIFhcJ6K4YRcO6XeGbwu5J_Yg640BfOtNybmsIIMFo-qqM75LpFJOrj3Rz6w';
+  const player = new Spotify.Player({
+    name: 'Web Playback SDK Quick Start Player',
+    getOAuthToken: cb => { cb(token); }
+  });
+
+  // Error handling
+  player.addListener('initialization_error', ({ message }) => { console.error(message); });
+  player.addListener('authentication_error', ({ message }) => { console.error(message); });
+  player.addListener('account_error', ({ message }) => { console.error(message); });
+  player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+  // Playback status updates
+  player.addListener('player_state_changed', state => { console.log(state); });
+
+  // Ready
+  player.addListener('ready', ({ device_id }) => {
+    console.log('Ready with Device ID', device_id);
+  });
+
+  // Not Ready
+  player.addListener('not_ready', ({ device_id }) => {
+    console.log('Device ID has gone offline', device_id);
+  });
+
+  // Connect to the player!
+  player.connect();
+};
+
+const play = ({
+  spotify_uri,
+  playerInstance: {
+    _options: {
+      getOAuthToken,
+      id
+    }
+  }
+}) => {
+  getOAuthToken(access_token => {
+    fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
+      method: 'PUT',
+      body: JSON.stringify({ uris: [spotify_uri] }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${access_token}`
+      },
+    });
+  });
+};
+
+play({
+  playerInstance: new Spotify.Player({ name: "..." }),
+  spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
+});
+  </script>
+  
+
+  
+          
+      </div>
+   </body>
+</html>
+      
+      
