@@ -318,6 +318,7 @@ padding-bottom:-60px;
     top:50px;
     left:40px;
     background:#0A080B;
+    visibility:hidden;
     }
     
     #demo{
@@ -371,6 +372,53 @@ padding-bottom:-60px;
     width:150px;
     }
     
+       /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index:100;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #7D1E80;
+    width: 45%;
+    left:-50px;
+    top:100px;
+    
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#link{
+  width:550px;
+}
+
       </style>
       
        
@@ -489,63 +537,54 @@ padding-bottom:-60px;
       
       <script src="https://sdk.scdn.co/spotify-player.js"></script>
       
-      <script>
-        window.onSpotifyWebPlaybackSDKReady = () => {
-        const token = 'BQAQyX2Zd9GW1GM55sTmFcwQ_QSOZ8Ltimt2gdzkxBwG0wgz9onM09ToZqhFvRclTde-ftjBjCOCegTXd9jQIb01b1AWaQlAgEjSzpIQ9yZNIFhcJ6K4YRcO6XeGbwu5J_Yg640BfOtNybmsIIMFo-qqM75LpFJOrj3Rz6w';
-        const player = new Spotify.Player({
-        name: 'Web Playback SDK Quick Start Player',
-        getOAuthToken: cb => { cb(token); }
-        });
-        
-        // Error handling
-        player.addListener('initialization_error', ({ message }) => { console.error(message); });
-        player.addListener('authentication_error', ({ message }) => { console.error(message); });
-        player.addListener('account_error', ({ message }) => { console.error(message); });
-        player.addListener('playback_error', ({ message }) => { console.error(message); });
-        
-        // Playback status updates
-        player.addListener('player_state_changed', state => { console.log(state); });
-        
-        // Ready
-        player.addListener('ready', ({ device_id }) => {
-        console.log('Ready with Device ID', device_id);
-        });
-        
-        // Not Ready
-        player.addListener('not_ready', ({ device_id }) => {
-        console.log('Device ID has gone offline', device_id);
-        });
-        
-        // Connect to the player!
-        player.connect();
-        };
-        
-        const play = ({
-        spotify_uri,
-        playerInstance: {
-        _options: {
-        getOAuthToken,
-        id
-        }
-        }
-        }) => {
-        getOAuthToken(access_token => {
-        fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({ uris: [spotify_uri] }),
-        headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${access_token}`
-        },
-        });
-        });
-        };
-        
-        play({
-        playerInstance: new Spotify.Player({ name: "..." }),
-        spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
-        });
-      </script>
+       <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <br/>
+    <p><strong>Copy this link to share the session with your friends!</strong></p>
+    <form>
+      <input id="link" type="text" autofocus value="https://setlist-website.herokuapp.com/App/new_session.html/sessionId=000001">
+    </form>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("share-link");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+    document.getElementById("link").select();
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    document.getElementById("members").style.visibility = "visible";
+    
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+</script>
     </div>
     
 </html>
